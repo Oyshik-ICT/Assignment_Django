@@ -22,7 +22,8 @@ class Amenity(models.Model):
         return self.name
 
 class Property(models.Model):
-    property_id = models.AutoField(primary_key=True)
+    # property_id = models.AutoField(primary_key=True)
+    property_id = models.IntegerField(primary_key=True) 
     title = models.CharField(max_length=200)
     description = models.TextField()
     locations = models.ManyToManyField(Location)

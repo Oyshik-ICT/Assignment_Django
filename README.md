@@ -6,7 +6,7 @@ DataShift is a Django-based web application that manages hotel property data. It
 
 ```diff
 + I apologize for the inconvenience, but there has been an important change to the Scrapy project.
-+ Please use the updated Scrapy project from the following repository:
++ Please use the new Scrapy project from the following repository:
 +
 + https://github.com/Oyshik-ICT/Assignment_Scrapy_Modified
 +

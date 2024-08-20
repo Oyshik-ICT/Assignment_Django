@@ -140,6 +140,7 @@ ENV/
 env.bak/
 venv.bak/
 myenv/
+myenve/
 
 media/
 

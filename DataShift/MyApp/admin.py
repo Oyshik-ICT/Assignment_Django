@@ -24,17 +24,16 @@
 #     list_filter = ('create_date', 'update_date')
 #     inlines = [ImageInline]
 #     filter_horizontal = ('locations', 'amenities')
-    
+
 #     # Add property_id to the fields in the form view
 #     fields = ('property_id', 'title', 'description', 'locations', 'amenities', 'create_date', 'update_date')
-    
+
 #     readonly_fields = ('create_date', 'update_date')
 
 # @admin.register(Image)
 # class ImageAdmin(admin.ModelAdmin):
 #     list_display = ('property', 'img_src')
 #     search_fields = ('property__title',)
-
 
 
 # from django.contrib import admin
@@ -79,7 +78,7 @@
 # class ImageAdmin(admin.ModelAdmin):
 #     list_display = ('property', 'img_src', 'image_thumbnail')
 #     search_fields = ('property__title',)
-    
+
 #     def image_thumbnail(self, obj):
 #         if obj.img_src:
 #             # Adjust the URL to include MEDIA_URL prefix
@@ -89,12 +88,10 @@
 #     image_thumbnail.short_description = 'Thumbnail'
 
 
-
-
-
 from django.contrib import admin
 from django.utils.html import format_html
 from .models import Location, Amenity, Property, Image
+
 
 @admin.register(Location)
 class LocationAdmin(admin.ModelAdmin):
@@ -102,10 +99,12 @@ class LocationAdmin(admin.ModelAdmin):
     list_filter = ('type',)
     search_fields = ('name', 'type')
 
+
 @admin.register(Amenity)
 class AmenityAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
+
 
 class ImageInline(admin.TabularInline):
     model = Image
@@ -117,14 +116,17 @@ class ImageInline(admin.TabularInline):
             return format_html('<img src="{}" style="width: 150px; height: auto;">', obj.img_src)
         return "No Image"
 
+
 @admin.register(Property)
 class PropertyAdmin(admin.ModelAdmin):
-    list_display = ('property_id', 'title', 'create_date', 'update_date', 'first_image_thumbnail')
+    list_display = ('property_id', 'title', 'create_date',
+                    'update_date', 'first_image_thumbnail')
     search_fields = ('property_id', 'title', 'description')
     list_filter = ('create_date', 'update_date')
     inlines = [ImageInline]
     filter_horizontal = ('locations', 'amenities')
-    fields = ('property_id', 'title', 'description', 'locations', 'amenities', 'create_date', 'update_date')
+    fields = ('property_id', 'title', 'description', 'locations',
+              'amenities', 'create_date', 'update_date')
     readonly_fields = ('create_date', 'update_date', 'first_image_thumbnail')
 
     def first_image_thumbnail(self, obj):
@@ -135,11 +137,12 @@ class PropertyAdmin(admin.ModelAdmin):
         return "No Image"
     first_image_thumbnail.short_description = 'First Image'
 
+
 @admin.register(Image)
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('property', 'img_src', 'image_thumbnail')
     search_fields = ('property__title',)
-    
+
     def image_thumbnail(self, obj):
         if obj.img_src:
             return format_html('<img src="{}" style="width: 150px; height: auto;">', obj.img_src)

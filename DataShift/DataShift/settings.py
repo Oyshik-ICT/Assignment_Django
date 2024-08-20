@@ -76,17 +76,17 @@ WSGI_APPLICATION = 'DataShift.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-       'default': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'OPTIONS': {
             'service': 'my_service',
         },
     },
 
-        'scrapy': {
+    'scrapy': {
         'ENGINE': 'django.db.backends.postgresql',
         'OPTIONS': {
-            'service': 'my_scrapy_service',  
+            'service': 'my_scrapy_service',
         },
     },
 }

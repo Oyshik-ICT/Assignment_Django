@@ -1,2 +1,5 @@
 django
 psycopg2-binary
+flake8 
+autopep8
+black

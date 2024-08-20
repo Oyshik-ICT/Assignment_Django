@@ -71,8 +71,24 @@ cd Assignment_Django
    ```
 
 8. Create a superuser for the Django admin:
+
    ```
    python manage.py createsuperuser
+   ```
+
+9. Configure VS Code settings (Optional but recommended):
+
+   If you're using VS Code as your editor, you can use the following `settings.json` file configuration to ensure code quality and formatting consistency:
+
+   ```json
+   {
+     "python.linting.enabled": true,
+     "python.linting.flake8Enabled": true,
+     "python.formatting.provider": "autopep8",
+     "python.formatting.autopep8Args": ["--max-line-length=79"],
+     "editor.formatOnSave": true,
+     "python.linting.flake8Args": ["--max-line-length=79"]
+   }
    ```
 
 ## Running the Project

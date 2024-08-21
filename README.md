@@ -6,33 +6,30 @@ DataShift is a Django-based web application that manages hotel property data. It
 
 ```diff
 + I apologize for the inconvenience, but there has been an important change to the Scrapy project.
-+ Please use the new Scrapy project from the following repository:
-+
-+ https://github.com/Oyshik-ICT/Assignment_Scrapy_Modified
-+
-+ [IMPORTANT: Copy and paste the above URL into your browser to access the new repository]
-+
 + This new version includes necessary modifications for compatibility with the Django project.
 ```
 
+Please use the new Scrapy project from the following repository:
+
+[https://github.com/Oyshik-ICT/Assignment_Scrapy_Modified](https://github.com/Oyshik-ICT/Assignment_Scrapy_Modified)
+
 ## Setup Instructions
 
-````diff
-+ 1. Clone the updated Scrapy project:
-+    ```
-+    git clone https://github.com/Oyshik-ICT/Assignment_Scrapy_Modified.git
-+    cd Assignment_Scrapy_Modified
-+    ```
-+
-+ 2. Set up and run the Scrapy project according to its README instructions.
-+
-+ 3. Once the Scrapy project has successfully run and populated its database, proceed with the Django project setup:
-````
+1. Clone the updated Scrapy project:
 
-```
-git clone https://github.com/Oyshik-ICT/Assignment_Django.git
-cd Assignment_Django
-```
+   ```
+   git clone https://github.com/Oyshik-ICT/Assignment_Scrapy_Modified.git
+   cd Assignment_Scrapy_Modified
+   ```
+
+2. Set up and run the Scrapy project according to its README instructions.
+
+3. Once the Scrapy project has successfully run and populated its database, proceed with the Django project setup:
+
+   ```
+   git clone https://github.com/Oyshik-ICT/Assignment_Django.git
+   cd Assignment_Django
+   ```
 
 4. Create a virtual environment and activate it:
 
@@ -79,9 +76,7 @@ cd Assignment_Django
    ```
 
 9. Configure VS Code settings (Optional but recommended):
-
    If you're using VS Code as your editor, you can use the following `settings.json` file configuration to ensure code quality and formatting consistency:
-
    ```json
    {
      "python.linting.enabled": true,
@@ -116,5 +111,5 @@ To migrate data from the Scrapy database to the Django database:
 This command will transfer hotel data from the Scrapy database to the Django database and migrate images to the Django media directory.
 
 ```diff
-+ Thank you for your understanding regarding these changes. If you encounter any issues, please don't hesitate to reach out.
++Thank you for your understanding regarding these changes. If you encounter any issues, please reach out.
 ```
